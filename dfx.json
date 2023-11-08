@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "certiSys_backend": {
+      "main": "src/certiSys_backend/main.mo",
+      "type": "motoko"
+    },
+    "certiSys_frontend": {
+      "dependencies": [
+        "certiSys_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/certiSys_frontend/src/index.html"
+      },
+      "source": [
+        "src/certiSys_frontend/assets",
+        "dist/certiSys_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
